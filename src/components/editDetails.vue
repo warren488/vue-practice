@@ -34,8 +34,22 @@ div {
   min-height: 200px;
   background-color: lightblue;
   padding: 15px;
-  border: thin solid darkblue;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px darkblue;
   width: 38%;
+  margin: 5px;
+}
+button {
+  border: none;
+  background-color: blue;
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+  &:hover {
+    background-color: darkblue;
+    cursor: pointer;
+  }
 }
 </style>
 

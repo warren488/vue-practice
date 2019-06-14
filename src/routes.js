@@ -31,10 +31,12 @@ const Special = resolve => {
 export const routes = [
     { path: '/quotes', component: Quotes },
     {
-        path: '/special/:stuff', component: Special, props: x => { console.log(x); return { stuff: '' } }, beforeEnter(to, from, next) {
+        path: '/special/:stuff',
+        component: Special, props: x => { console.log(x); return { stuff: '' } },
+        beforeEnter(to, from, next) {
             if (to.query.hide) {
                 let hidden = JSON.parse(decodeURIComponent(to.query.hide))
-                next({path: to.query.path, props: hidden })
+                next({ path: to.query.path, props: hidden })
             }
             next()
         }

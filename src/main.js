@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from './views/Home.vue'
 import { routes } from './routes'
+import {store } from './state/store'
 
 Vue.use(VueRouter)
 
@@ -18,6 +19,7 @@ export const vBus = new Vue({
 })
 new Vue({
   el: '#app',
+  store,
   router,
   render: h => h(Home)
 })

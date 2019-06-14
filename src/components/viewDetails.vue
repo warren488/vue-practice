@@ -33,8 +33,23 @@ div {
   display: inline-block;
   min-height: 200px;
   background-color: lightpink;
-  border: thin solid darkred;
+  // border: thin solid darkred;
+  border: none;
+  border-radius: 5px;
   width: 48%;
+  box-shadow: 1px 1px 5px darkred;
+  margin: 5px;
+}
+button {
+  border: none;
+  background-color: red;
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+  &:hover {
+    background-color: darkred;
+    cursor: pointer;
+  }
 }
 </style>
 

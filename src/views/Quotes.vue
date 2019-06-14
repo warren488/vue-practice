@@ -14,15 +14,15 @@
 <script>
 import ProgressComponent from "../components/progress.vue";
 import quoteDisplay from "../components/quoteDisplay.vue";
-import colorPicker from '../components/colorPicker.vue';
+import colorPicker from "../components/colorPicker.vue";
 export default {
   components: {
     ProgressComponent,
     colorPicker
   },
   data() {
-    let __this = this
-    
+    let __this = this;
+
     return {
       progression: {
         name: "Stuff",
@@ -36,7 +36,7 @@ export default {
   methods: {
     addQuote() {
       this.progression.amount = this.quotes.push(this.$refs.quote.value);
-      this.$refs.quote.value = ''
+      this.$refs.quote.value = "";
     },
     removeQuote(index) {
       this.quotes.splice(index, 1);
